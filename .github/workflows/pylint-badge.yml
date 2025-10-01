@@ -1,0 +1,15 @@
+name: Pylint Badge
+
+on:
+  push:
+    paths:
+      - '**/*.py'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: YourName/pylint-ghpages-action@v1
+        with:
+          path: "."
