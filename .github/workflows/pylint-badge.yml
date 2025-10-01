@@ -1,6 +1,9 @@
 name: Pylint Badge
 
-on: [push]
+on:
+  push:
+    paths:
+      - '**/*.py'
 
 jobs:
   lint:
@@ -10,3 +13,5 @@ jobs:
       - uses: devs-des1re/pylint-badge@v1
         with:
           path: "."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
