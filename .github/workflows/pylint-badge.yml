@@ -1,9 +1,6 @@
 name: Pylint Badge
 
-on:
-  push:
-    paths:
-      - '**/*.py'
+on: [push]
 
 jobs:
   lint:
